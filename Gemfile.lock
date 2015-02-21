@@ -85,6 +85,14 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    elasticsearch (1.0.6)
+      elasticsearch-api (= 1.0.6)
+      elasticsearch-transport (= 1.0.6)
+    elasticsearch-api (1.0.6)
+      multi_json
+    elasticsearch-transport (1.0.6)
+      faraday
+      multi_json
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.3.0)
@@ -224,6 +232,10 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    searchkick (0.8.7)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -296,6 +308,7 @@ DEPENDENCIES
   rails_layout
   rubocop
   sass-rails (~> 5.0)
+  searchkick
   simple_form
   spring
   sqlite3

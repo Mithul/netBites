@@ -44,3 +44,4 @@ gem 'omniauth'
 gem 'open_uri_redirections'
 gem "paperclip", "~> 4.2"
 gem 'ckeditor'
+gem "searchkick"

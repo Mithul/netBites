@@ -4,7 +4,11 @@ class IngredientsController < ApplicationController
   # GET /ingredients
   # GET /ingredients.json
   def index
-    @ingredients = Ingredient.all
+     if params[:query].present?
+      @ingredients = Ingredient.search(params[:query])
+    else
+      @ingredients = Ingredient.all
+    end
   end
 
   # GET /ingredients/1
@@ -59,6 +63,10 @@ class IngredientsController < ApplicationController
       format.html { redirect_to ingredients_url, notice: 'Ingredient was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def autocomplete
+    render json: Ingredient.search(params[:query], autocomplete: true, limit: 10).map(&:name)
   end
 
   private
