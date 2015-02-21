@@ -14,6 +14,6 @@ class AddAvatarToUsers < ActiveRecord::Migration
   def self.down
     drop_attached_file :users, :avatar
     drop_attached_file :ingredients, :avatar
-    drop_attached_file :recipes, :avatar
+    drop_attached_file :recipesx, :avatar
   end
 end
