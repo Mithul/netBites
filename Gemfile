@@ -32,3 +32,15 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'rubocop'
 end
+
+
+gem 'omniauth-facebook'
+gem 'koala'
+gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
+gem 'omniauth-soundcloud', '~> 1.0.0'
+gem 'omniauth-gplus', '~> 1.0'
+gem 'omniauth'
+gem 'open_uri_redirections'
+gem "paperclip", "~> 4.2"
+gem 'ckeditor'
