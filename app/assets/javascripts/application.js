@@ -15,4 +15,14 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require ckeditor/init
+//= require typeahead.min
 //= require_tree .
+
+
+$(function() {
+	// alert($('#recipe_search').parent.html);
+  $('#recipe_search').typeahead({
+    name: "recipe",
+    remote: "/autocomplete?query=%QUERY"
+  });
+});

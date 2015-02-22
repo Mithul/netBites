@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $('#recipe_search').typeahead
-    name: "recipe"
-    remote: "/recipes/autocomplete?query=%QUERY"
+  	$('#recipe_search').typeahead
+    	name: "recipe"
+    	remote: "/recipes/autocomplete?query=%QUERY"
